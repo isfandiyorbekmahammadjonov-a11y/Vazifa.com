@@ -1,7 +1,14 @@
 import React from "react";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginLayout from "./Layouts/LoginLayout";
+const router = createBrowserRouter([
+  {
+    path: "/admin/login",
+    element: <LoginLayout />,
+  },
+]);
 function App() {
-  return <div className="text-red-600 text-9xl flex justify-center">Hello</div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
